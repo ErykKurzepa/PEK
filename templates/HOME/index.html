@@ -1,0 +1,78 @@
+{% extends 'HOME/base.html' %}
+{% load static%}
+{% block block_content %}
+<br>
+<div class="jumbotron">
+    <h1 class="display-4">Hey There! </h1>
+  <div class="row">
+    <div class="col-md-8">
+     <p class="lead">
+                I'm Eryk, an experienced engineer with passion for mechanical engineering, manufacturing,
+                automatic control and robotics, computer science and internet technology.
+      </p>
+        <h5>About Me</h5>
+        <p>
+            Since I can remember, I have always been interested in computers and mathematics.
+            Starting from High School where my class profile was mathematics and computer science
+            I was amazed with possibilities that computer programming can provide in solving mathematical challenges.
+            My first PC was home build Intel Celeron 300MHz and 128 MB RAM memory, and that was all I needed to build some simple PC apps in
+            Turbo Pascal - a programming language that probably some youngest programmer doesn't even know it existed! :)
+        </p>
+        <p>
+            Many years have passed, and I have a different PC now. I also have a loving, beautiful, smart, sexy, amazing wife Karolina, 3 children: Leon, Emil and Karol
+            and a dog Ella. </p><p>One thing didn't change though: <strong>My passion to mathematics and computers! </strong>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="{% static 'HOME/home_me.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+  <hr class="my-4">
+  <h5>My Education and Skills</h5>
+     <p>
+        After completing my high school, I continued my education at Kielce University of Technology (Poland) where I have
+        acquired two university degrees:
+        <ul>
+            <li>
+               Bachelor's degree in Mechanical Engineering (year 2007)
+            </li>
+             <li>
+               Master's degree in Applied Computer Science (year 2008)
+            </li>
+        </ul>
+        At the university I gained some basic knowledge about web development using HTML, CSS, PHP and MySQL.
+        I also learned programming languages: PHP, Delphi, Visual Basic for Excel.
+        I have also become fascinated with mechanical engineering, especially computer aided designing CAD, computer aided manufacturing CAM and
+        Computer Numerical Controlled (CNC) machines.
+    </p>
+    <p>
+        After completing my university education I have chosen the mechanical engineering to be my professional
+        career patch. Over the years I have gained broad experience in designing and manufacturing of
+        mechanical components. I have gained a lot of experience with CAD and CAM software, especially Catia and NX, but also Mastercam and Powermill.
+        I have been testing and creating solutions using some great NX components like: Product Template Studio,
+        Machining Knowledge Editor, PostBuilder. The amount of automation and optimization of CAM programming that NX is offering is just wonderful.
+    </p>
+    <p>
+        In recent years I became more and more interested in Computer Science, Internet of Things,
+        Automatic Control and Robotics.
+        I started to use my computer science education and acquired IT skills whenever I had possibility to optimize my
+        mechanical engineering work. I have learned basics of C#, ASP.NET,MSSQL Server and Visual Studio.
+        Recently I have also learned Python as it seems to be very flexible language with a wide variety of usage.
+        I have also learned Django framework, and that's what I used for creating this web page.
+        I use IT knowledge to build small computer programs that help me with my daily work as mechanical engineer.
+        You can see few examples of such programs / software on this web page, check my CAD, CAM and IT pages for more details.
+    </p>
+    <p>
+        My other passion is Automatic Control and Robotics. Few years ago I started learning about electronics,
+        home automation, sensors, controlling IoT project using API technology etc. Arduino (open-source electronics
+        platform) became my
+        hobby and I started completing different Arduino projects (toy cars, android apps for controlling lights
+        with Bluetooth etc) - check my IoT page for details. This hobby evaluated into something more serious:
+        in 2019 I completed postgraduate studies: Industrial Control Systems in AGH University of Science and Technology in Krakow (Poland)
+    </p>
+    <p>
+        This site is a collection of my work, interests, and writings;
+        if any of those things intrigue you, don't hesitate to reach out.
+    </p>
+</div>
+{% endblock %}

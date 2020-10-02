@@ -1,0 +1,59 @@
+{% extends 'CAD/base.html' %}
+{% load crispy_forms_tags %}
+{% block tool_list_content %}
+
+<h3>Tolerances</h3>
+  <p>Use this program to find tolerances</p>
+
+  <hr class="my-4">
+
+  <div class="row">
+
+    <div class="col-md-6">
+        <h4>Feature details:</h4>
+     <form method="POST" enctype="multipart/form-data">
+         {{ form.diameter|as_crispy_field }}
+         {{ form.feature_type|as_crispy_field }}
+         {{ form.tolerance_letter|as_crispy_field }}
+         {{ form.tolerance_class|as_crispy_field }}
+         {% csrf_token %}
+         <br>
+         <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
+       <div class="col-md-6">
+           <h4>Feature tolerance calculation result:</h4>
+           {% if diameter %}
+
+          Feature type: {{ feature_type }}<br>
+<table>
+  <tr>
+    <td><h5>&#248; {{ diameter }}</h5> </td>
+    <td> <table><tr>
+    <td>
+       {% if feature_type == 'shaft' %}
+            es: {{ es }}
+           {% else %}
+            EI: {{ ei }}
+           {% endif %}
+
+    </td></tr><tr>
+    <td>
+         {% if feature_type == 'shaft' %}
+          ei: {{ ei }}
+           {% else %}
+          ES: {{ es }}
+           {% endif %}
+
+    </td>
+</tr></table></td></tr>
+</table>
+           {% else %}
+        No results available
+
+{% endif %}
+
+       </div>
+  </div>
+
+{% endblock %}

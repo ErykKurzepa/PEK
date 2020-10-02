@@ -1,0 +1,12 @@
+{% extends 'HOME/base.html' %}
+
+{% block block_content %}
+
+
+<div class="jumbotron"><h4>{{ blog.title }}</h4>
+</div>
+<br>Date:
+{{ blog.date|date:'d M Y' }}<br><br>
+<p class="lead">{{ blog.description }}</p><br>
+
+{% endblock %}

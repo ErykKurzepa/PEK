@@ -1,0 +1,23 @@
+{% extends 'HOME/base.html' %}
+
+{% block block_content %}
+
+<div class="jumbotron">
+               <h4>Blog</h4>
+        </div>
+{% for blog in blogs %}
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="alert alert-light" role="alert">
+      <h5><a class="alert-link" href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a></h5>
+        <h6>{{ blog.description|truncatechars:100 }}</h6>
+    </div>
+
+</div>
+
+
+
+
+
+{% endfor %}
+
+{% endblock %}

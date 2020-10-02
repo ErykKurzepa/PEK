@@ -1,0 +1,32 @@
+{% extends 'HOME/base.html' %}
+{% load crispy_forms_tags %}
+{% block block_content %}
+
+  <div class="row">
+    <div class="col-md-2">
+<ul class="nav flex-column nav-pills">
+
+  <li class="nav-item">
+    <a class="nav-link
+{% url 'IT_management' as IT_management_url %}
+      {% if IT_management_url in request.get_full_path %}active{% endif %}
+" href="{% url 'IT_management' %}">Data Management</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link
+ {% url 'IT_scraping' as IT_scraping_url %}
+  {% url 'IT' as IT_url %}
+      {% if IT_scraping_url in request.get_full_path %}active{% endif %}
+" href="{% url 'IT_scraping' %}">Web Scraping</a>
+  </li>
+</ul><br><br>
+    </div>
+        <div class="col-md-10">
+
+
+      {% block IT %}
+     <!-- tool list content -->
+      {% endblock %}
+        </div></div>
+
+{% endblock %}

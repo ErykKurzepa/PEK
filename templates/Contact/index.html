@@ -1,0 +1,68 @@
+{% extends 'HOME/base.html' %}
+{% load crispy_forms_tags %}
+{% block block_content %}
+
+<h4> </h4>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+        <div class="jumbotron">
+               <h4>Contact me</h4>
+        </div>
+    </div>
+    <div class="col-md-4">
+           <h5>About me</h5>
+        <p>
+            Hey there! I'm Eryk, an experienced engineer with passion for mechanical engineering, manufacturing,
+            automatic control and robotics, computer science and internet technology.
+        </p>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-md-8">
+        <p>
+        If you’d like to get in touch with me, whether to hire me, request additional contact information,
+        or just to say hi, you can contact me using the form below or my e-mail address: eryk.kurzepa @ gmail . com
+        [minus the spaces!]
+        </p>
+          <hr class="my-4">
+        <p>
+        <strong>Contact Form:</strong> <br>
+            {{ info|safe }}
+        </p>
+
+                 <form method="POST" >
+
+
+
+                      {% csrf_token %}
+                        <div class="row">
+                          <div class="col-12">
+                            {{ form.name|as_crispy_field }}
+                          </div>
+                        </div>
+                      <div class="row">
+                          <div class="col-12">
+                            {{ form.email|as_crispy_field }}
+                          </div>
+                        </div>
+                      <div class="row">
+                          <div class="col-12 fluid">
+                        {{ form.text|as_crispy_field }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                          </div></div>
+
+
+
+                 </form>
+
+    </div>
+    <div class="col-md-4">
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

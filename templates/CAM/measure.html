@@ -1,0 +1,121 @@
+{% extends 'CAM/base.html' %}
+{% load static%}
+
+
+{% block CAM %}
+<h3>Automatic Quality Control of Your Manufacturing Process</h3><br>
+<h4>Goal: Keep machines utilisation and parts quality high</h4>
+
+  <div class="row">
+    <div class="col-md-8">
+      Most modern manufacturing companies expect to run their production 24 hours, 7 days per week. It is very important to keep their machines utilisation high and manufacture as many parts as possible in shortest time. They use robots and other automation techniques to achieve this goal. Such approach is very profitable but it also creates some challenges.
+One such challenge is quality control of increased number of parts. Many companies doesn’t have quality department that works 24 hours / 7 days per week. Therefore parts quality measurements are performed only at limited time and on limited amount of parts. This increases a risk of long batch production that is not verified.
+Necessary quality assurance processes generate costs to manufacturing process and may decrease manufacturing equipment utilization since the manufacturing process needs to be stopped until quality evaluation from quality department in completed.
+
+    </div>
+    <div class="col-md-4">
+     <img src="{% static 'CAM/QUALITY_CONTROL/goal.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+
+<br>
+<h4>Solution: Automatic Quality Control of Manufacturing Process</h4>
+  <div class="row">
+    <div class="col-md-8">
+<p>Automatic Quality Control for manufacturing process is a Visual Basic macro that runs under Microsoft Excel.
+    It can save a lot of time and money by eliminating time consuming quality inspection procedures and prevent manufacturing errors.
+</p><p>Automatic Quality Control evaluates manufactured components while they are still in CNC machine, without removing them from fixtures and without quality department equipment. The only equipment needed is a CNC machine with probing system.
+</p><p>Automatic Quality Control is also very easy to implement and use and therefore it is very useful tool for machine operators.
+
+    </p>
+    </div>
+    <div class="col-md-4">
+     <img src="{% static 'CAM/QUALITY_CONTROL/probe.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+<br>
+<h4>System applications: collect, evaluate, prevent, report</h4>
+<div class="row">
+    <div class="col-md-12">
+        <p>Automatic Quality Control can work independently and deliver following advantages:</p>
+    <ul>
+        <li>
+            Automatically collect measurement results from CNC.
+        </li>
+    </ul>
+          <ul>
+        <li>
+            Evaluate measured dimensions, calculate deviations and present quality status on measured features in easy to read form.
+
+        </li>
+    </ul>
+          <ul>
+        <li>
+            Create measurement reports and store measurement results for future reference.
+
+        </li>
+    </ul>
+        <ul>
+        <li>
+            Automatically stop manufacturing process if critical feature dimensions are out of tolerance
+
+        </li>
+    </ul>
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/QUALITY_CONTROL/system.png' %}" class="card-img-top" alt="...">
+
+        </div>
+        </div>
+
+ </div>
+  </div>
+<br>
+
+<h4>Quick and easy system implementation</h4>
+<p>Only 3 simple steps are necessary for setup and use of our Automatic Quality Control</p>
+
+
+<div class="card-deck">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/QUALITY_CONTROL/evaluate.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">1. Evaluate manufacturing drawing tolerances.</p>
+             </div>
+        </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/QUALITY_CONTROL/create.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">2. Create probing cycles in CAM software or with manual input in CNC controller.</p>
+             </div>
+        </div>
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/QUALITY_CONTROL/insert.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">3. Insert drawing tolerances in excel sheet that include my visual basic macro.</p>
+             </div>
+        </div>
+    </div>
+<br>
+<p>ps. You will have to edit visual basic macro and change file path variable so it points to measurement results text file that is created by your CNC machine.</p>
+
+<br>
+<h4>Download, use, enjoy !</h4>
+  <div class="row">
+    <div class="col-md-8">
+<p>You can find excel file including visual basic macros necessary to run software on my GitHub repository: </p>
+    </div>
+      <div class="col-md-4">
+<a class="btn btn-primary" href="https://github.com/ErykKurzepa/AUTOMATIC-QUALITY-CONTROL" target="_blank" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Go to source code on GitHub
+  </a>
+      </div></div>
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+<img src="{% static 'CAM/QUALITY_CONTROL/production.jpg' %}" class="card-img-top" alt="...">
+            </div>
+        </div>
+
+
+{% endblock %}

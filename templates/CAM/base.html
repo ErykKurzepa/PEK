@@ -1,0 +1,36 @@
+{% extends 'HOME/base.html' %}
+{% load crispy_forms_tags %}
+{% block block_content %}
+
+  <div class="row">
+    <div class="col-md-2">
+<ul class="nav flex-column nav-pills">
+  <li class="nav-item">
+    <a class="nav-link
+ {% url 'CAM_probe' as CAM_probe_url %}
+      {% if request.get_full_path == CAM_probe_url %}active{% endif %}
+" href="{% url 'CAM_probe' %}">Probe</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link
+{% url 'CAM_measure' as CAM_measure_url %}
+      {% if request.get_full_path == CAM_measure_url %}active{% endif %}
+" href="{% url 'CAM_measure' %}">Measure</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link
+{% url 'CAM_cnc' as CAM_cnc_url %}
+      {% if request.get_full_path == CAM_cnc_url %}active{% endif %}
+" href="{% url 'CAM_cnc' %}">CNC</a>
+  </li>
+</ul><br><br>
+    </div>
+        <div class="col-md-10">
+
+
+      {% block CAM %}
+     <!-- tool list content -->
+      {% endblock %}
+        </div></div>
+
+{% endblock %}

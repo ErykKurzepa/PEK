@@ -1,0 +1,30 @@
+{% extends 'CAD/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block tool_list_content %}
+<h3>Tool List</h3>
+  <p>This is a python app (beta) that will extract all tool numbers from CNC program file. The app will generate
+      tool list file that can be used to measure tools length on CNC machine</p>
+<p>
+    This is a beta version. The next step will be to implement tool list class and sesion id so that each user can be
+    assigned unique tool list file to download.
+</p>
+  <h5>Enter cnc file details: </h5>
+ {{ info|safe }}
+  <hr class="my-4">
+     <form method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+
+         {{ form.file|as_crispy_field }}
+         <br>
+         <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+
+<br>
+<p>ps. You can download sample CNC file from here:  </p>
+        <a class="btn btn-primary" href="{% static 'CAD/TOOL_LIST/CNC_CODE.MIN' %}" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Download
+  </a>
+
+{% endblock %}

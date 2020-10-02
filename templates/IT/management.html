@@ -1,0 +1,106 @@
+{% extends 'IT/base.html' %}
+{% load static%}
+
+
+
+{% block IT %}
+<h3>Manufacturing Data Management</h3><br>
+<div class="row">
+    <div class="col-md-12">
+     <p>Manufacturing Data Management is a solution for
+managing production, technology and quality
+         documentation in a manufacturing company.</p>
+        <p>Software was created using C#, ASP.NET and MS SQL Server.</p>
+    </div>
+  </div>
+<h4>Categorize information and documents</h4>
+
+<div class="row">
+   <div class="col-md-12">
+  <p>The database divides production documentation into separate Data
+Sets – each Set for different documentations type. For example
+Technology Drawings Data, CNC programs Data Set, Quality
+Documents Data Set ...
+<BR>Thanks to this categorization, data access and data search for specific
+record is greatly improved.
+        </p>
+        <img src="{% static 'IT/management1.png' %}" class="img-fluid">
+   </div>
+  </div>
+<br>
+<h4>Search and Filter records</h4>
+
+<div class="row">
+   <div class="col-md-12">
+  <p>Each Data set can be searched using Id and key words. Data Sets can also be filtered using filters
+        </p>
+   </div>
+  </div>
+<div class="row">
+   <div class="col-md-3">
+  Basic search and  filtering
+   </div>
+    <div class="col-md-9">
+        <img src="{% static 'IT/management2.png' %}" class="img-fluid">
+   </div>
+  </div>
+<div class="row">
+   <div class="col-md-3">
+  Advanced search and filtering
+   </div>
+    <div class="col-md-9">
+        <img src="{% static 'IT/management3.png' %}" class="img-fluid">
+   </div>
+  </div>
+
+<br>
+<h4>Manage changes and revisions</h4>
+
+<div class="row">
+   <div class="col-md-12">
+  <p>Document revisions can be assigned to records. Files and
+documets can be assigned to each revision.
+        </p>
+   </div>
+  </div>
+<div class="row">
+   <div class="col-md-3">
+  Documents
+   </div>
+    <div class="col-md-9">
+        <img src="{% static 'IT/management4.png' %}" class="img-fluid">
+   </div>
+  </div>
+<div class="row">
+   <div class="col-md-3">
+  Revisions
+   </div>
+    <div class="col-md-9">
+        <img src="{% static 'IT/management5.png' %}" class="img-fluid">
+   </div>
+  </div>
+
+
+<br>
+<h4>Download, use, enjoy !</h4>
+  <div class="row">
+    <div class="col-md-8">
+<p>See the live demo version of the software: <br>
+(please be patient as the server response is slow)</p>
+
+    </div>
+      <div class="col-md-4">
+<a class="btn btn-primary" href="http://leopek.gearhostpreview.com/" target="_blank" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Go to live demo
+  </a><br><br>
+            </div></div>
+       <div class="row">
+    <div class="col-md-8">
+<p>You can find python project on my GitHub repository: </p>
+    </div>
+      <div class="col-md-4">
+          <a class="btn btn-primary" href="https://github.com/ErykKurzepa/DATA-MANAGEMENT" target="_blank" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Go to source code on GitHub
+  </a>
+      </div></div>
+{% endblock %}

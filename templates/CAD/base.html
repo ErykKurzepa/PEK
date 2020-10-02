@@ -1,0 +1,36 @@
+{% extends 'HOME/base.html' %}
+{% load crispy_forms_tags %}
+{% block block_content %}
+
+  <div class="row">
+    <div class="col-md-2">
+<ul class="nav flex-column nav-pills">
+  <li class="nav-item">
+    <a class="nav-link
+ {% url 'CAD_LANG' as CAD_LANG_url %}
+      {% if request.get_full_path == CAD_LANG_url %}active{% endif %}
+" href="{% url 'CAD_LANG' %}">Lang System </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link
+{% url 'CAD_TOL' as CAD_TOL_url %}
+      {% if request.get_full_path == CAD_TOL_url %}active{% endif %}
+" href="{% url 'CAD_TOL' %}">Tolerances</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link
+{% url 'CAD_TOOL' as CAD_TOOL_url %}
+      {% if request.get_full_path == CAD_TOOL_url %}active{% endif %}
+" href="{% url 'CAD_TOOL' %}">Tool List</a>
+  </li>
+</ul><br><br>
+    </div>
+        <div class="col-md-10">
+
+
+      {% block tool_list_content %}
+     <!-- tool list content -->
+      {% endblock %}
+        </div></div>
+
+{% endblock %}

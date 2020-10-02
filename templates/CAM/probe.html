@@ -1,0 +1,57 @@
+{% extends 'CAM/base.html' %}
+{% load static%}
+
+
+{% block CAM %}
+<h3>OKUMA Probing cycles generator</h3><br>
+<h4>Goal: Write probing instructions for CNC machines </h4>
+
+Probing cycles are used for measuring and positioning on CNC machines.
+Unfortunately most of the cycles need to by typed in manually what is time consuming and error prone.
+<br><br>
+<h4>Solution: Automatically generate probing code from software</h4>
+
+
+<div class="card-deck">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/OKUMA_PROBING/wks.PNG' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">Generate code for setting base coordinate system on CNC machine</p>
+             </div>
+        </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/OKUMA_PROBING/set_xy.PNG' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">Generate code for updating X, Y and Z axis value for base coordinate system on CNC machine</p>
+             </div>
+        </div>
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'CAM/OKUMA_PROBING/set_c.PNG' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <p class="card-text">Generate code for updating A and C axis value for base coordinate system on CNC machine</p>
+             </div>
+        </div>
+    </div>
+<br>
+
+
+<h4>Download, use, enjoy !</h4>
+  <div class="row">
+    <div class="col-md-8">
+<p>Use this software that will take a basic inputs necessary to generate probing cycles for CNC machine: </p>
+    </div>
+      <div class="col-md-4">
+<a class="btn btn-primary" href="https://github.com/ErykKurzepa/OKUMA-PROBING" target="_blank" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Go to source code on GitHub
+  </a>
+      </div></div>
+
+
+
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eNDWlCL7kOw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+{% endblock %}

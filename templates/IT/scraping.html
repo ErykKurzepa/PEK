@@ -1,0 +1,29 @@
+{% extends 'IT/base.html' %}
+{% load static%}
+
+
+
+{% block IT %}
+<h3>Scrapping www.kjv.dk web page for end mill tools parameters</h3><br>
+<div class="row">
+    <div class="col-md-7">
+      When you are programming CNC machine, you need to see what are available tools that you can use in your program.
+      This is a beta version of web scrapping tool that searches through www.kjv.dk
+        for manufacturing tools definitions and parameters.
+    </div>
+    <div class="col-md-5">
+     <img src="{% static 'IT/scraping.png' %}" class="img-fluid">
+    </div>
+  </div>
+
+<h4>Download, use, enjoy !</h4>
+  <div class="row">
+    <div class="col-md-8">
+<p>You can find python project on my GitHub repository: </p>
+    </div>
+      <div class="col-md-4">
+<a class="btn btn-primary" href="https://github.com/ErykKurzepa/SCRAPING-MANUFACTURING-TOOLS" target="_blank" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Go to source code on GitHub
+  </a>
+      </div></div>
+{% endblock %}

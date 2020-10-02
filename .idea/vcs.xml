@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/PEK" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/CAD/LANG SYSTEM/LANG-SYSTEM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/CAM/OKUMA_PROBING/OKUMA-PROBING" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/CAM/QUALITY_CONTROL/AUTOMATIC QUALITY CONTROL/AUTOMATIC-QUALITY-CONTROL" vcs="Git" />
+  </component>
+</project>
